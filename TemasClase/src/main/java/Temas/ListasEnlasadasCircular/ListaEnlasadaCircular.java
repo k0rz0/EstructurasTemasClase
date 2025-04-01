@@ -136,6 +136,7 @@ public class ListaEnlasadaCircular<E extends Comparable> {
     }
 
     public int comparar(E dato1, E dato2){
+        
         return dato1.compareTo(dato2);
     }
 

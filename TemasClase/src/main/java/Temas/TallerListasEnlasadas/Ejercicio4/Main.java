@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.Ejercicio3;
+package Temas.TallerListasEnlasadas.Ejercicio4;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,10 +8,10 @@ public class Main {
         lista.insertarFinal(2);
         lista.insertarFinal(3);
         lista.insertarFinal(4);
-        lista.insertarFinal(4);
-        lista.insertarFinal(4);
+        lista.insertarFinal(5);
+        lista.insertarFinal(6);
 
-        lista.eliminarDuplicados();
+        lista.dividirLista();
         lista.imprimirLista();
     }
 }

@@ -1,4 +1,8 @@
-package Temas.TallerListasEnlasadas.Ejercicio3;
+package Temas.TallerListasEnlasadas.Ejercicio4;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListaEnlasada<E extends Comparable> {
 
@@ -36,27 +40,28 @@ public class ListaEnlasada<E extends Comparable> {
        System.out.println("Null");
    }
 
-    public void eliminarDuplicados() {
-        if (cabeza == null) {
-            return;
-        }
-
+    public void dividirLista() {
         Nodo<E> actual = cabeza;
+        int contador = size/2;
 
-        while (actual != null) {
-            Nodo<E> iterador = actual;
+        List<E> posicionPares = new ArrayList<E>();
+        List<E> posicionImpares = new ArrayList<E>();
 
-            while (iterador.getSiguiente() != null) {
-                if (actual.getDato() == iterador.getSiguiente().getDato()) {
-                    iterador.setSiguiente(iterador.getSiguiente().getSiguiente());
-                    size--;
-                } else {
-                    iterador = iterador.getSiguiente();
-                }
+        for (int i=0; i<=contador; i++){
+            posicionPares.add(actual.getDato());
+
+            if (actual.getSiguiente() != null){
+                posicionImpares.add(actual.getSiguiente().getDato());
+                actual = actual.getSiguiente().getSiguiente();
+            }else{
+                break;
             }
 
-            actual = actual.getSiguiente();
         }
+
+        System.out.println(posicionPares);
+        System.out.println(posicionImpares);
+
     }
 
 }
