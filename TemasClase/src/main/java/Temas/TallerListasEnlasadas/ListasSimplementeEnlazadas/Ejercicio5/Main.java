@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.Ejercicio2;
+package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio5;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,8 +8,10 @@ public class Main {
         lista.insertarFinal(2);
         lista.insertarFinal(3);
         lista.insertarFinal(4);
+        lista.insertarFinal(5);
+        lista.insertarFinal(6);
 
-        lista.reverse();
-        lista.imprimirLista();
+        System.out.println("¿La lista contiene un ciclo? " + lista.validarCliclo());
+        //lista.imprimirLista();
     }
 }

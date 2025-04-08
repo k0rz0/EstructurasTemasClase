@@ -1,6 +1,7 @@
-package Temas.ListasEnlasadasCircular;
+package Temas.Bicola;
 
 public class Nodo<E> {
+
     private E dato;
     private Nodo<E> siguiente;
 

@@ -1,7 +1,6 @@
-package Temas.TallerListasEnlasadas.Ejercicio2;
+package Temas.TallerListasEnlasadas.ListasCirculares.Ejercicio4;
 
 public class Nodo<E> {
-
     private E dato;
     private Nodo<E> siguiente;
 

@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.Ejercicio1;
+package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio1;
 
 public class Main {
     public static void main(String[] args) {

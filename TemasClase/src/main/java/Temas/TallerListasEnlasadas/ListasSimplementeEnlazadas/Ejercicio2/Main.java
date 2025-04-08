@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.Ejercicio3;
+package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio2;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,10 +8,8 @@ public class Main {
         lista.insertarFinal(2);
         lista.insertarFinal(3);
         lista.insertarFinal(4);
-        lista.insertarFinal(4);
-        lista.insertarFinal(4);
 
-        lista.eliminarDuplicados();
+        lista.reverse();
         lista.imprimirLista();
     }
 }

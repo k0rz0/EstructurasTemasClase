@@ -1,4 +1,4 @@
-package Temas.ListasEnlasadasCircular;
+package Temas.TallerListasEnlasadas.ListasCirculares.Ejercicio3;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,9 +9,7 @@ public class Main {
         lista.insertarFinal(10);
         lista.insertarFinal(5);
 
-        lista.imprimirLista();
-        lista.sort();
-        lista.imprimirLista();
+        System.out.println("¿La lista es circular? "+ lista.validarCliclo());
 
     }
 }

@@ -1,4 +1,4 @@
-package Temas.ListasEnlasadasCircular;
+package Temas.TallerListasEnlasadas.ListasCirculares.Ejercicio1;
 
 public class Nodo<E> {
     private E dato;

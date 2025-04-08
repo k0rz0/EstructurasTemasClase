@@ -1,6 +1,5 @@
-package Temas.TallerListasEnlasadas.Ejercicio4;
+package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio4;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -5,7 +5,7 @@ public class ListaEnlasada<E extends Comparable> {
     private Nodo<E> cabeza;
     int size;
 
-    ListaEnlasada() {
+    public ListaEnlasada() {
         this.cabeza = null;
         size = 0;
     }

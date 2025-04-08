@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.Ejercicio4;
+package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio4;
 
 public class Nodo<E> {
 

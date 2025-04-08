@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.Ejercicio3;
+package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio2;
 
 public class ListaEnlasada<E extends Comparable> {
 
@@ -36,27 +36,25 @@ public class ListaEnlasada<E extends Comparable> {
        System.out.println("Null");
    }
 
-    public void eliminarDuplicados() {
-        if (cabeza == null) {
-            return;
-        }
-
+    public void reverse() {
         Nodo<E> actual = cabeza;
+        Nodo<E> anterior = null;
+        Nodo<E> siguienteTmp = null;
 
-        while (actual != null) {
-            Nodo<E> iterador = actual;
+        while (actual != null){
 
-            while (iterador.getSiguiente() != null) {
-                if (actual.getDato() == iterador.getSiguiente().getDato()) {
-                    iterador.setSiguiente(iterador.getSiguiente().getSiguiente());
-                    size--;
-                } else {
-                    iterador = iterador.getSiguiente();
-                }
+            siguienteTmp = actual.getSiguiente();
+
+            if (actual == cabeza){
+                actual.setSiguiente(null);
+            }else{
+                actual.setSiguiente(anterior);
             }
 
-            actual = actual.getSiguiente();
+            anterior = actual;
+            actual = siguienteTmp;
         }
-    }
 
+        cabeza = anterior;
+    }
 }

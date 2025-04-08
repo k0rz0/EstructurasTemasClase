@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.Ejercicio2;
+package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio5;
 
 public class ListaEnlasada<E extends Comparable> {
 
@@ -22,10 +22,30 @@ public class ListaEnlasada<E extends Comparable> {
                 actual = actual.getSiguiente();
             }
             actual.setSiguiente(nuevo);
+
+            /*if(dato.equals(6)){
+                nuevo.setSiguiente(cabeza); // Se agrega este codigo para probar si funciona validarCliclo()
+            }*/
             size++;
         }
     }
 
+    public boolean validarCliclo(){
+        Nodo<E> tortoise = cabeza;
+        Nodo<E> hare = cabeza;
+
+        while (tortoise.getSiguiente() != null &&
+                hare.getSiguiente().getSiguiente() != null ){
+
+            tortoise = tortoise.getSiguiente();
+            hare = hare.getSiguiente().getSiguiente();
+
+            if(tortoise == hare){
+                return true;
+            }
+        }
+        return false;
+    }
 
    public void imprimirLista(){
         Nodo<E> actual = cabeza;
@@ -36,25 +56,6 @@ public class ListaEnlasada<E extends Comparable> {
        System.out.println("Null");
    }
 
-    public void reverse() {
-        Nodo<E> actual = cabeza;
-        Nodo<E> anterior = null;
-        Nodo<E> siguienteTmp = null;
 
-        while (actual != null){
 
-            siguienteTmp = actual.getSiguiente();
-
-            if (actual == cabeza){
-                actual.setSiguiente(null);
-            }else{
-                actual.setSiguiente(anterior);
-            }
-
-            anterior = actual;
-            actual = siguienteTmp;
-        }
-
-        cabeza = anterior;
-    }
 }
