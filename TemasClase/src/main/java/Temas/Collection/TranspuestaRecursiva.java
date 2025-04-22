@@ -1,4 +1,4 @@
-package Temas.Colection;
+package Temas.Collection;
 
 public class TranspuestaRecursiva {
 

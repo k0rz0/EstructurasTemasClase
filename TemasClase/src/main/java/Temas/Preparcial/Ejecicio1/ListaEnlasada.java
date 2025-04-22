@@ -1,4 +1,4 @@
-package Temas.TallerListasEnlasadas.ListasSimplementeEnlazadas.Ejercicio2;
+package Temas.Preparcial.Ejecicio1;
 
 public class ListaEnlasada<E extends Comparable> {
 

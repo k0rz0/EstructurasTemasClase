@@ -10,15 +10,11 @@ public class Main {
         List<String> expresionPost = new ArrayList<>();
 
         evaluar("(a+b+c)-d");
-
-
     }
 
     public static StringBuilder evaluar(String expresion){
         StringBuilder resultado = new StringBuilder();
         PilaAritmetica<Character> pila = new PilaAritmetica<>();
-
-
 
         return resultado;
     }

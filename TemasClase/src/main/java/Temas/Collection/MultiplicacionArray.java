@@ -1,4 +1,4 @@
-package Temas.Colection;
+package Temas.Collection;
 
 public class MultiplicacionArray {
     public static int multiplicar(int[] arr, int inicio, int fin) {

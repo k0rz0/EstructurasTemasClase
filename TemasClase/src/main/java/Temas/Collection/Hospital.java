@@ -1,4 +1,4 @@
-package Temas.Colection;
+package Temas.Collection;
 import java.util.PriorityQueue;
 
 class Paciente implements Comparable<Paciente> {
