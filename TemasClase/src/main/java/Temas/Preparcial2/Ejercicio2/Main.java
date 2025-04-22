@@ -1,4 +1,4 @@
-package Temas.Preparcial.Ejecicio2;
+package Temas.Preparcial2.Ejercicio2;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,26 +14,19 @@ public class Main {
         pila.push(7);
         pila.push(8);
 
-        ordenarPrimos(pila);
+        ordenarPrimos(pila).imprimir();
     }
 
-    public static void ordenarPrimos( Pila <Integer> pila){
-
-        for(int i = 0; i < pila.getSize(); i++){
-
-            int num1 = pila.pop();
-
-            if(validarPrimo(num1) || num1 == 1){
-                int num2 = pila.pop();
-                num1 = pila.pop();
-
-                pila.push(num2);
-                pila.push(num1);
-            }else{
-                pila.push(num1);
+    public static Pila<Integer> ordenarPrimos( Pila <Integer> pila){
+        Pila<Integer> pilaPrimos = new Pila<>();
+        int size = pila.getSize();
+        for(int i = 0; i < size; i++){
+            int num = pila.pop();
+            if(validarPrimo(num) || num == 1){
+                pilaPrimos.push(num);
             }
-
         }
+        return pilaPrimos;
     }
 
 
@@ -46,13 +39,9 @@ public class Main {
                 contador++;
             }
         }
-
         if(contador == 2){
             return true;
         }
-
         return false;
     }
-
-
 }

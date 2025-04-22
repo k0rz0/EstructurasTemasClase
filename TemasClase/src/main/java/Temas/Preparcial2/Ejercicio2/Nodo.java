@@ -1,4 +1,4 @@
-package Temas.Preparcial.Ejecicio2;
+package Temas.Preparcial2.Ejercicio2;
 
 public class Nodo<E> {
 

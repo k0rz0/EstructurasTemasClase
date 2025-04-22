@@ -1,4 +1,4 @@
-package Temas.Preparcial.Ejecicio2;
+package Temas.Preparcial2.Ejercicio2;
 
 public class Pila<E> {
     private Nodo<E> top;
@@ -41,5 +41,16 @@ public class Pila<E> {
             dato = (E) top.getDato();
         }
         return dato;
+    }
+
+    public void imprimir(){
+        Nodo<E> actual = top;
+
+        while (actual.getSiguiente() != null){
+            System.out.print(actual.getDato() + "->");
+            actual = actual.getSiguiente();
+        }
+
+        System.out.println(actual.getDato());
     }
 }

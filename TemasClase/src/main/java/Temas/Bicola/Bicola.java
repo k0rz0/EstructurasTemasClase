@@ -1,6 +1,6 @@
 package Temas.Bicola;
 
-public class Bicola<E extends Comparable> {
+public class Bicola<E> {
 
     private Nodo<E> cabeza;
     private Nodo<E> cola;
@@ -37,12 +37,14 @@ public class Bicola<E extends Comparable> {
         size++;
     }
 
-    public void desencolarInicio(){
-
-        if (cabeza == null){
-            return;
+    public <E> E desencolarInicio(){
+        E dato = null;
+        if(!isVacio()){
+            dato = (E) cabeza.getDato();
+            cabeza = cabeza.getSiguiente();
         }
-        cabeza = cabeza.getSiguiente();
+        size --;
+        return dato;
     }
 
     public void desencolarFinal(){
@@ -62,6 +64,7 @@ public class Bicola<E extends Comparable> {
     public boolean isVacio(){
         return size == 0;
     }
+
    public void imprimirLista(){
         Nodo<E> actual = cabeza;
         while (actual != null){
