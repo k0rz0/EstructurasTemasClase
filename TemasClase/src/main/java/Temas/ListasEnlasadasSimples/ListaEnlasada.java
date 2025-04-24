@@ -10,6 +10,14 @@ public class ListaEnlasada<E extends Comparable> {
         size = 0;
     }
 
+    public int getSize() {
+        return size;
+    }
+
+    public boolean isEmpty(){
+        return size == 0;
+    }
+
     public void insertarFinal(E dato){
 
         Nodo<E> nuevo = new Nodo<>(dato);
