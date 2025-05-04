@@ -16,11 +16,24 @@ public class Main {
 
         int suma = sumarlista(pila);
         System.out.println("Suma: " + suma);
-        pila2 = insertarValor(pila);
-
+        pila2 = insertarValor(pila, suma);
+        pila2.imprimir();
     }
 
-    private static Pila<Integer> insertarValor(Pila<Integer> pila) {
+    private static Pila<Integer> insertarValor(Pila<Integer> pila, int suma) {
+
+        if (pila.isEmpty()){
+            return pila;
+        }
+
+        int dato = pila.pop();
+        insertarValor(pila, suma);
+
+        pila.push(dato);
+        if(dato == suma){
+            pila.push(suma);
+        }
+
         return pila;
     }
 
@@ -33,8 +46,8 @@ public class Main {
         int suma = pila.pop();
 
         suma = suma + sumarlista(pila);
-        pila.push(dato
-        );
+        pila.push(dato);
+
         return suma;
     }
 }

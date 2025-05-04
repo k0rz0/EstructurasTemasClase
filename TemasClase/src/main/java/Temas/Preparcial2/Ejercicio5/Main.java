@@ -14,10 +14,12 @@ public class Main {
 
     private static boolean validarBalanceada(String cadena){
         Pila<String> pila = new Pila<>();
+
         for(String caracter: cadena.split("")){
             if(caracter.equals("(") || caracter.equals("{") || caracter.equals("[")){
                 pila.push(caracter);
             } else if (caracter.equals(")") || caracter.equals("}") || caracter.equals("]")) {
+
                 if (pila.isEmpty()){
                     return false;
                 }
@@ -29,7 +31,6 @@ public class Main {
                     return false;
                 }
             }
-
         }
         return pila.isEmpty();
     }
